@@ -73,20 +73,6 @@ const DATA = {
       tech: "React, Next.js, TypeScript, REST/GraphQL APIs, Auth, Charts, Tailwind/CSS, PostgreSQL",
       highlight: true,
     },
-    {
-      name: "Saba Group",
-      url: "https://sabagroup.eu",
-      role: "Frontend",
-      summary: "Corporate site build-out with clean sections, responsive layout, and performance attention.",
-      tech: "HTML, CSS, JavaScript",
-    },
-    {
-      name: "Shetit.com",
-      url: "https://shetit.com",
-      role: "Frontend",
-      summary: "Travel/experience landing implementation with UI polish and responsiveness.",
-      tech: "HTML, CSS, JavaScript",
-    },
   ],
 };
 
