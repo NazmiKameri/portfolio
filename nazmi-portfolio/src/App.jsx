@@ -669,37 +669,19 @@ export default function App() {
 
         {/* CONTACT */}
         <Section id="contact" title="Contact">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
-            <div style={{ display: "grid", gap: 8 }}>
-              <div style={styles.small}>Email</div>
-              <div style={{ fontWeight: 900 }}>{DATA.email}</div>
-              <div style={styles.small}>Phone</div>
-              <div style={{ fontWeight: 900 }}>{DATA.phone}</div>
-              <div style={styles.small}>Instagram</div>
-              <div style={{ fontWeight: 900 }}>nazmikameri</div>
-              <div style={styles.small}>Linkedin</div>
-              <div style={{ fontWeight: 900 }}>https://www.linkedin.com/in/nazmi-kameri/</div>
+          <div style={{ display: "grid", gap: 8 }}>
+            <div style={styles.small}>Email</div>
+            <div style={{ fontWeight: 900 }}>
+              <a href={`mailto:${DATA.email}`} style={{ color: "#e5e7eb" }}>
+                {DATA.email}
+              </a>
             </div>
-
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                const form = new FormData(e.currentTarget);
-                const subject = `Portfolio contact from ${form.get("name") || "Someone"}`;
-                const body = `Name: ${form.get("name")}\nEmail: ${form.get("email")}\n\nMessage:\n${form.get("message")}`;
-                window.location.href = `mailto:${DATA.email}?subject=${encodeURIComponent(
-                  subject
-                )}&body=${encodeURIComponent(body)}`;
-              }}
-              style={{ display: "grid", gap: 8 }}
-            >
-              <input name="name" style={styles.input} placeholder="Your name" />
-              <input name="email" style={styles.input} placeholder="Your email" />
-              <textarea name="message" style={styles.textarea} placeholder="Message..." />
-              <button type="submit" style={{ ...styles.primaryBtn, cursor: "pointer" }}>
-                Send Email
-              </button>
-            </form>
+            <div style={styles.small}>Phone</div>
+            <div style={{ fontWeight: 900 }}>{DATA.phone}</div>
+            <div style={styles.small}>Instagram</div>
+            <div style={{ fontWeight: 900 }}>nazmikameri</div>
+            <div style={styles.small}>LinkedIn</div>
+            <div style={{ fontWeight: 900 }}>https://www.linkedin.com/in/nazmi-kameri/</div>
           </div>
         </Section>
 
@@ -720,8 +702,6 @@ export default function App() {
         @media (max-width: 760px) {
           .page-container { padding: 22px 0 54px; width: 96vw; }
           .two-col { grid-template-columns: 1fr !important; }
-          section#contact > div { grid-template-columns: 1fr !important; }
-          section#contact form { order: 2; }
           h1 { font-size: 34px !important; }
           .cta-row a { width: 100%; justify-content: center; text-align: center; }
           .cta-row { gap: 10px !important; }
