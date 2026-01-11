@@ -4,7 +4,7 @@ const DATA = {
   name: "Nazmi Kameri",
   title: "Software Developer",
   location: "Prishtina, 10000",
-  email: "nazmik1233@gmail.com",
+  email: "kameri.nazmi1@gmail.com",
   phone: "+38344728892",
   summary:
     "Dynamic, innovative, results-driven Software Developer with full-stack experience. Focused on stability, refactoring, and building scalable features, especially subscription analytics and dashboards for Stripe.",
